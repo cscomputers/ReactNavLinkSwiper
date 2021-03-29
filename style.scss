@@ -1,0 +1,37 @@
+$borderSize: 1.5px;
+$SelectedBorderSize: 2px;
+$fontSize: 0.875rem;
+
+.container {
+  display: flex;
+  overflow: scroll;
+  margin: 0 -1rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .item {
+    min-width: 20%;
+    text-align: center;
+    font-size: $fontSize;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: inherit;
+    padding-bottom: 1em;
+  }
+
+  .selectedItem {
+    color: var(--danger);
+    border-bottom: $SelectedBorderSize solid;
+    width: 80px;
+  }
+}
+
+.line {
+  margin-left: -10% !important;
+  margin-right: -10% !important;
+  margin-top: -1px !important;
+  border-radius: 4px;
+  border-top: 1.6px solid rgba(0, 0, 0, 0.1);
+}
